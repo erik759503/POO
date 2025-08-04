@@ -9,8 +9,8 @@
 	//"features": {
 	//	"ghcr.io/devcontainers-contrib/features/apt-packages:1": {
 	//		"packages": "libcairo2-dev,pkg-config"
-		}
-	},
+		//}
+	//}
 
 	// Configure tool-specific properties.
 	"customizations": {
@@ -26,7 +26,7 @@
                 "redhat.vscode-yaml" // Ajuda com os arquivos _config.yml e _toc.yml
 			]
 		}
-	},
+	}
 
 	 // Use 'forwardPorts' to make a list of ports inside the container available locally.
     // Útil se você quiser rodar um servidor para pré-visualizar o livro.
