@@ -1,5 +1,5 @@
 [project]
-name = "taskmanager-pro"
+name = "taskmanager"
 version = "0.1.0"
 description = "Sistema profissional de gerenciamento de tarefas"
 authors = [
