@@ -12,7 +12,7 @@ from enum import Enum
 from typing import Optional, List
 from uuid import UUID, uuid4
 
-from pydantic import BaseModel, Field, validator, ConfigDict
+from pydantic import BaseModel, Field, field_validator, ConfigDict
 
 
 class TaskPriority(str, Enum):
@@ -148,7 +148,7 @@ class Task(BaseModel):
         description="Estimativa de esforço em horas"
     )
     
-    @validator('due_date')
+    @field_validator('due_date')
     @classmethod
     def validate_due_date(cls, v: Optional[datetime]) -> Optional[datetime]:
         """
@@ -173,7 +173,7 @@ class Task(BaseModel):
             )
         return v
     
-    @validator('tags')
+    @field_validator('tags')
     @classmethod
     def validate_tags(cls, v: List[str]) -> List[str]:
         """
